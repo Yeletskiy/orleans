@@ -92,7 +92,7 @@ This means that this is likely a bug: <code>var notIntendedTask = Task.Factory.S
 <code>notIntendedTask</code> is <em>not</em> a task that completes when <code>SomeDelegateAsync</code> does.
 Instead, one should <em>always</em> unwrap the returned task: <code>var task = Task.Factory.StartNew(SomeDelegateAsync).Unwrap()</code>.</p>
 <h3 id="example">Example:</h3>
-<p>Below is sample code that demonstrates the usage of <code>TaskScheduler.Current</code>, <code>Task.Run</code> and a special custom scheduler to escape from Orlean grain context and how to get back to it.</p>
+<p>Below is sample code that demonstrates the usage of <code>TaskScheduler.Current</code>, <code>Task.Run</code> and a special custom scheduler to escape from Orleans grain context and how to get back to it.</p>
 <pre><code class="lang-csharp">   public async Task MyGrainMethod()
    {
         // Grab the Orleans task scheduler
