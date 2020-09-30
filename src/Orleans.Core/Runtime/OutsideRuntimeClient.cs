@@ -148,12 +148,12 @@ namespace Orleans
                 this.localAddress = this.clientMessagingOptions.LocalAddress ?? ConfigUtilities.GetLocalIPAddress(this.clientMessagingOptions.PreferredFamily, this.clientMessagingOptions.NetworkInterfaceName);
 
                 // Client init / sign-on message
-                logger.Info(ErrorCode.ClientInitializing, string.Format(
+                /*logger.Info(ErrorCode.ClientInitializing, string.Format(
                     "{0} Initializing OutsideRuntimeClient on {1} at {2} Client Id = {3} {0}",
                     BARS, Dns.GetHostName(), localAddress,  clientId));
                 string startMsg = string.Format("{0} Starting OutsideRuntimeClient with runtime Version='{1}' in AppDomain={2}",
                     BARS, RuntimeVersion.Current, PrintAppDomainDetails());
-                logger.Info(ErrorCode.ClientStarting, startMsg);
+                logger.Info(ErrorCode.ClientStarting, startMsg);*/
 
                 if (TestOnlyThrowExceptionDuringInit)
                 {
